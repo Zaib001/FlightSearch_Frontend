@@ -13,7 +13,7 @@ const App = () => {
     const handleSearch = async (searchParams) => {
         setLoading(true);
         try {
-            const response = await axios.post('http://localhost:5000/flights/search', searchParams);
+            const response = await axios.post('https://flightsearch-backend-2.onrender.com/flights/search', searchParams);
             const { itineraries, prices } = response.data;
               setResults(itineraries || []);
               setPrices(prices || []);
